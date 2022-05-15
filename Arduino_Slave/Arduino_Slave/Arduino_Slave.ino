@@ -65,16 +65,8 @@ void Application ()
 
 {
 
-  if (EASYCAT.BufferOut.Byte[0] == 1)
-  {
-    digitalWrite (BitOut0, HIGH);
-    Serial.print("1\n");
-  }
 
-  else {
-    digitalWrite (BitOut0, LOW);
-    Serial.print("0\n");
-  }
+    digitalWrite (BitOut0, EASYCAT.BufferOut.Byte[0]);
 
 
 }

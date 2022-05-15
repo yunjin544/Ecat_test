@@ -1,6 +1,6 @@
 XENO_SKIN = posix
-MAIN_SRC=simple_test
-TARGET=DRCL_EtherCAT
+MAIN_SRC=Realtime_EtherCAT_test
+TARGET=Realtime_EtherCAT_test
 
 SOEM_INC_DIR = /usr/local/include/soem
 SOEM_LIB_DIR = /usr/local/lib

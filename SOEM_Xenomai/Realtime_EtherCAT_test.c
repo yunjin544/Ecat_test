@@ -17,7 +17,7 @@
 #define LOOP_PERIOD 5e5
 #define NSEC_PER_SEC 1000000000
 
-char IOmap[256];
+char IOmap[64];
 int expectedWKC;
 int chk;
 volatile int wkc;
@@ -44,7 +44,7 @@ int main(int argc, char *argv[])
       
       ECat_init(argv[1]);
       osal_thread_create(&thread1, 128000, &Ecatcheck, NULL);
-      rt_task_create(&loop_task, "Ecat Loop", 0, 50, 0);
+      rt_task_create(&loop_task, "Ecat Loop", 0, 99, 0);
       rt_task_start(&loop_task, &ECat_PDO_LOOP, 0);
       pause();
 
